@@ -176,7 +176,7 @@ public:
 
 	TFClass					m_TFClass;
 
-protected:
+public://protected
 	double m_flNormalizedEngagementNextTime;	
 
 	CBaseTFPlayer			*m_pPlayer;		// Reference to the player
@@ -195,10 +195,10 @@ protected:
 	int							m_iNumWeaponTechAssociations;
 
 	CHandle<CWeaponCombatShield> m_hWpnShield;
-private:
+public://Private
 	void ClearAllWeaponTechAssoc( void );
 
-private:
+public://Private
 	bool	m_bTechAssociationsSet;
 };
 

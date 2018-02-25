@@ -92,6 +92,7 @@ void CTFGameMovementCommando::CheckBullRush( void )
 	if ( CheckDoubleTapForward() && !TFMove()->CommandoData().m_bBullRush && 
 		 TFMove()->CommandoData().m_bCanBullRush && !( player->GetFlags() & FL_DUCKING ) )
 	{
+		DevMsg("Bull rush\n");
 		// Set in a bull rush.
 		TFMove()->CommandoData().m_bBullRush = true;
 

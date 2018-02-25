@@ -280,7 +280,7 @@ bool CTFGameMovementRecon::CheckWallJump( CTFMoveData *pTFMove )
 			pTFMove->ReconData().m_vecImpactNormal, vUnstickVel );
 		pTFMove->ReconData().m_vecUnstickVelocity = vUnstickVel;
 	}
-
+	
 	return true;
 }
 
@@ -312,7 +312,7 @@ bool CTFGameMovementRecon::CheckBackJump( bool bWasInAir )
 	VectorNormalize( jumpDir );
 
 	float flGroundFactor = 1.0f;
-	if ((player->m_pSurfaceData) /*&& (!bWasInAir)*/ )
+	if ((player->m_pSurfaceData)) //&& (!bWasInAir))
 	{
 		flGroundFactor = player->m_pSurfaceData->game.jumpFactor;
 	}
@@ -336,7 +336,7 @@ bool CTFGameMovementRecon::CheckBackJump( bool bWasInAir )
 	mv->m_vecVelocity[1] = clamp( mv->m_vecVelocity[1], -200, 200 );
 	if (mv->m_vecVelocity[2] > MAX_VERTICAL_SPEED)
 		mv->m_vecVelocity[2] = MAX_VERTICAL_SPEED;
-
+		
 	return true;
 }
 
@@ -346,6 +346,7 @@ bool CTFGameMovementRecon::CheckBackJump( bool bWasInAir )
 //-----------------------------------------------------------------------------
 bool CTFGameMovementRecon::CheckStrafeJump( bool bWasInAir )
 {
+	DevMsg("Check strafe jump\n");
 	if ( (mv->m_nButtons & (IN_MOVELEFT | IN_MOVERIGHT)) == 0 )
 		return false;
 
@@ -361,7 +362,7 @@ bool CTFGameMovementRecon::CheckStrafeJump( bool bWasInAir )
 	VectorNormalize( jumpDir );
 
 	float flGroundFactor = 1.0f;
-	if ((player->m_pSurfaceData) /*&& (!bWasInAir)*/ )
+	if ((player->m_pSurfaceData) /*&& (!bWasInAir)*/)
 	{
 		flGroundFactor = player->m_pSurfaceData->game.jumpFactor;
 	}
@@ -383,7 +384,7 @@ bool CTFGameMovementRecon::CheckStrafeJump( bool bWasInAir )
 	mv->m_vecVelocity[1] = clamp( mv->m_vecVelocity[1], -400, 400 );
 	if (mv->m_vecVelocity[2] > MAX_VERTICAL_SPEED)
 		mv->m_vecVelocity[2] = MAX_VERTICAL_SPEED;
-
+		
 	return true;
 }
 
@@ -430,7 +431,7 @@ bool CTFGameMovementRecon::CheckForwardJump( bool bWasInAir )
 
 		// Slow down by the speed factor
 		float flGroundFactor = 1.0f;
-		if ((player->m_pSurfaceData) /* && (!bWasInAir) */ )
+		if ((player->m_pSurfaceData)) // && (!bWasInAir)
 		{
 			flGroundFactor = player->m_pSurfaceData->game.jumpFactor;
 		}
@@ -562,7 +563,7 @@ bool CTFGameMovementRecon::CheckJumpButton()
 
 	// Flag that we jumped.
 	mv->m_nOldButtons |= IN_JUMP;	// don't jump again until released
-
+	
 	return true;
 }
 

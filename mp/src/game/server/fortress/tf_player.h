@@ -390,7 +390,7 @@ protected:
 	void	PlantFootprint( surfacedata_t *psurface, const char *cMaterialStep );
 	void	UpdateWetness(void);
 
-private:
+public://jumping
 	// Medic Buffs
 	void	CheckBuffs( void );
 	void	RemoveHealthBoost( void );

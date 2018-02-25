@@ -41,6 +41,7 @@ C_PlayerClassRecon::C_PlayerClassRecon( C_BaseTFPlayer *pPlayer ) :
 	m_ClassData.m_vecImpactNormal.Init();
 	m_ClassData.m_vecUnstickVelocity.Init();
 	m_ClassData.m_bTrailParticles = false;
+	DevMsg("client: c_tf_class_recon.cpp line 44 \n");
 }
 
 C_PlayerClassRecon::~C_PlayerClassRecon()

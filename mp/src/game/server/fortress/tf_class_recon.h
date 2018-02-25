@@ -11,9 +11,10 @@
 
 #include "TFClassData_Shared.h"
 #include "tf_playerclass.h"
+#include "basetfcombatweapon_shared.h"//MS11
 
 class CTFJetpackSteam;
-class CReconJetpackLevel;
+class CReconJetpackLevel;//Jumping
 
 
 //=====================================================================
@@ -32,6 +33,10 @@ public:
 	virtual const char*	GetClassModelString( int nTeam );
 
 	// Class Initialization
+	virtual void	CreateClass(void);//MS11
+	virtual void	RespawnClass(void);//MS11
+	virtual bool	ClientCommand(const CCommand &args);//MS11
+
 	virtual bool	ResupplyAmmo( float flPercentage, ResupplyReason_t reason );
 	virtual void    SetupMoveData( void );			// Override class specific movement data here.
 	virtual void	SetupSizeData( void );			// Override class specific size data here.
@@ -53,6 +58,7 @@ public:
 
 protected:
 	bool					m_bHasRadarScanner;
+	CHandle<CBaseTFCombatWeapon> m_hWpnPlasma;//MS11
 };
 
 EXTERN_SEND_TABLE( DT_PlayerClassReconData )

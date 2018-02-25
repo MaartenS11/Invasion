@@ -114,6 +114,7 @@ void CPlayerClassRecon::SetupMoveData( void )
 	m_ClassData.m_vecImpactNormal.Init();
 	m_ClassData.m_vecUnstickVelocity.Init();
 	m_ClassData.m_bTrailParticles = false;
+	DevMsg("server: c_tf_class_recon.cpp line 117 \n" );
 }
 
 void CPlayerClassRecon::SetupSizeData( void )
@@ -136,7 +137,7 @@ void CPlayerClassRecon::ClassThink()
 {
 	BaseClass::ClassThink();
 
-	m_ClassData.m_bTrailParticles = (m_pPlayer->IsAlive() && !(m_pPlayer->GetFlags() & FL_ONGROUND));
+	//m_ClassData.m_bTrailParticles = (m_pPlayer->IsAlive() && !(m_pPlayer->GetFlags() & FL_ONGROUND)); // jumping
 }
 
 //-----------------------------------------------------------------------------
@@ -148,6 +149,23 @@ void CPlayerClassRecon::CreatePersonalOrder()
 		return;
 
 	BaseClass::CreatePersonalOrder();
+}
+
+void CPlayerClassRecon::CreateClass(void)//MS11
+{
+	DevMsg("Create recon \n");
+	BaseClass::CreateClass();
+}
+
+void CPlayerClassRecon::RespawnClass(void)
+{
+	DevMsg("Respawn recon \n");
+	BaseClass::RespawnClass();
+}
+
+bool CPlayerClassRecon::ClientCommand(const CCommand &args)
+{
+	return BaseClass::ClientCommand(args);
 }
 
 //-----------------------------------------------------------------------------

@@ -40,7 +40,7 @@ public:
 		return VEHICLE_DATA_SIZE;
 	}
 
-private:
+public://jumping
 	enum
 	{
 		VEHICLE_DATA_SIZE = 256
