@@ -5,3 +5,12 @@ Thanks to the following people...
 	Marco Hladik	(Additional models)
 	ScarT		(Human/Alien Commando model sources)
 	Valve		(For Team Fortress 2 and for additional fixes sto- er... taken from the 2007 Source Engine leak)
+	Hogsy		(Source 2013 port)
+
+	Teamfortress: Invasion team members(As of 8/03/2018):
+	NextWizard
+	Chous
+	MaartenS11
+	Magnus
+	Northern3D
+	Biscuit 
