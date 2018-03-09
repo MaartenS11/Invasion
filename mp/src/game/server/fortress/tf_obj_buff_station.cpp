@@ -30,8 +30,8 @@ static ConVar obj_buff_station_health( "obj_buff_station_health","100", FCVAR_NO
 #define BUFF_STATION_MINS							Vector( -30, -30, 0  )
 #define BUFF_STATION_MAXS							Vector(  30,  30, 50 )
 
-#define BUFF_STATION_HUMAN_MODEL					"models/objects/human_obj_buffstation.mdl"
-#define BUFF_STATION_HUMAN_ASSEMBLING_MODEL			"models/objects/human_obj_buffstation_build.mdl"
+#define BUFF_STATION_HUMAN_MODEL					"models/buildable/buffstation.mdl"//Temporary
+#define BUFF_STATION_HUMAN_ASSEMBLING_MODEL			"models/buildable/buffstation_build.mdl"
 #define BUFF_STATION_ALIEN_MODEL					"models/objects/alien_obj_buffstation.mdl"
 #define BUFF_STATION_ALIEN_ASSEMBLING_MODEL			"models/objects/alien_obj_buffstation_build.mdl"
 
@@ -93,6 +93,7 @@ CObjectBuffStation::CObjectBuffStation()
 
 void CObjectBuffStation::Spawn()
 {
+	DevMsg("buff_station spawned\n");
 	// This must be set before calling the base class spawn.
 	m_iHealth = obj_buff_station_health.GetInt();
 
