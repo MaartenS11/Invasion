@@ -191,7 +191,7 @@
 // OBJECTS
 
 @PointClass base(BaseObject, BaseTeam) = obj_manned_plasmagun : "Manned Plasma Gun" []
-@PointClass base(BaseObject, BaseTeam) = obj_respawn_station : "Respawn Station"
+@PointClass base(BaseObject, BaseTeam) studioprop("models/objects/obj_respawn_station.mdl") = obj_respawn_station : "Respawn Station"
 [
 	InitialSpawn(choices) : "Initial spawn?" : 1 : "Returns true if this spawn point is the map specified initial spawn point for its team." =
 	[

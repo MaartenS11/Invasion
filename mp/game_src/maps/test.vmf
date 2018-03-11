@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7538"
-	"mapversion" "15"
+	"mapversion" "31"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -15,12 +15,12 @@ viewsettings
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
 	"nGridSpacing" "16"
-	"bShow3DGrid" "0"
+	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "15"
+	"mapversion" "31"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1775,6 +1775,120 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "170"
+	"classname" "obj_respawn_station"
+	"angles" "0 0 0"
+	"CantDie" "1"
+	"InitialSpawn" "1"
+	"MinDisabledHealth" "10"
+	"TeamNum" "2"
+	"origin" "320 -464 80"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "177"
+	"classname" "obj_respawn_station"
+	"angles" "0 0 0"
+	"CantDie" "1"
+	"InitialSpawn" "1"
+	"MinDisabledHealth" "10"
+	"TeamNum" "3"
+	"origin" "256 -464 80"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "196"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "music/hl2_song1.mp3"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"spawnflags" "1"
+	"volstart" "10"
+	"origin" "138.425 -263.515 73"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "281"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "0 1 -0"
+	"BasisOrigin" "256 -512 128"
+	"BasisU" "1 0 0"
+	"BasisV" "0 -0 -1"
+	"EndU" "0"
+	"EndV" "1"
+	"fademindist" "-1"
+	"material" "/team1a"
+	"sides" "45"
+	"StartU" "1"
+	"StartV" "0"
+	"uv0" "-16 -16 0"
+	"uv1" "-16 16 0"
+	"uv2" "16 16 0"
+	"uv3" "16 -16 0"
+	"origin" "256 -512 128"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "287"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "0 1 -0"
+	"BasisOrigin" "320 -512 128"
+	"BasisU" "1 0 0"
+	"BasisV" "0 -0 -1"
+	"EndU" "0"
+	"EndV" "1"
+	"fademindist" "-1"
+	"material" "/team2a"
+	"sides" "45"
+	"StartU" "1"
+	"StartV" "0"
+	"uv0" "-16 -16 0"
+	"uv1" "-16 16 0"
+	"uv2" "16 16 0"
+	"uv3" "16 -16 0"
+	"origin" "320 -512 128"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
 	}
 }
 cameras
