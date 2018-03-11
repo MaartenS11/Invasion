@@ -199,3 +199,7 @@
 		1	: "True"
 	]
 ]
+@PointClass base(BaseObject, BaseTeam) studioprop("models/buildable/buffstation.mdl") = obj_buff_station : "Buff Station"
+[
+	
+]
